@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LabeledEditText">
+        <attr name="label" format="string" />
+        <attr name="label_color" format="color" />
+        <attr name="input_background" format="color" />
+        <attr name="input_color" format="color" />
+    </declare-styleable>
+</resources>
