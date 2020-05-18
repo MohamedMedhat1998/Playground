@@ -1,7 +1,7 @@
 package com.andalus.playground
 
 import android.view.LayoutInflater
-import android.view.View
+import androidx.appcompat.view.ContextThemeWrapper
 import androidx.test.platform.app.InstrumentationRegistry
 import com.facebook.testing.screenshot.Screenshot
 import com.facebook.testing.screenshot.ViewHelpers
@@ -18,7 +18,8 @@ class MainActivityTest {
      * on the view.
      */
         val context = InstrumentationRegistry.getInstrumentation().targetContext
-        val view = LayoutInflater.from(context).inflate(R.layout.activity_main, null, false)
+        val themedContext = ContextThemeWrapper(context, R.style.AppTheme)
+        val view = LayoutInflater.from(themedContext).inflate(R.layout.activity_main, null, false)
 
         /*
      * Measure and layout the view. In this example we give an exact
