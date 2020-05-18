@@ -4,16 +4,18 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.facebook.testing.screenshot'
+
 android {
-    compileSdkVersion 29
+    compileSdkVersion 28
     buildToolsVersion "29.0.1"
     defaultConfig {
         applicationId "com.andalus.playground"
-        minSdkVersion 21
-        targetSdkVersion 29
+        minSdkVersion 19
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.andalus.playground.MyTestRunner"
     }
     buildTypes {
         release {
@@ -32,4 +34,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.facebook.testing.screenshot:layout-hierarchy-common:0.12.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha02'
 }
